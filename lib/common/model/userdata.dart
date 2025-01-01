@@ -28,7 +28,7 @@ class UserDataNotifier extends StateNotifier<UserDataBase> {
       contactNumber: '010-5788-9302',
       giftAccountDetails: '1111-1111-1111 카카오뱅크',);
 
-    final PersonData brideDad = PersonData(name: '김명렬',
+    final PersonData brideDad = PersonData(name: '김명열',
       contactNumber: '010-5788-9302',
       giftAccountDetails: '1111-1111-1111 카카오뱅크',);
 
@@ -58,7 +58,7 @@ class UserDataNotifier extends StateNotifier<UserDataBase> {
     결혼의 기쁨이자
     아름다움이다.
     
-    영화[어바웃 타임] 태사 중에서
+    영화<어바웃 타임> 대사 중에서
     ''',
       themeColor: DEFAULT_BG_COLOR,
     );

@@ -15,27 +15,30 @@ class CalenderScreen extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: TableCalendar(
-          firstDay: DateTime.utc(2025, 3, 1),
-          lastDay: DateTime.utc(2025, 3, 31),
-          focusedDay: selectedDay,
-          selectedDayPredicate: (day) => isSameDay(selectedDay, day),
-          calendarStyle: CalendarStyle(
-            selectedDecoration: BoxDecoration(
-              color: Colors.orange, // 선택된 날짜 배경색
-              shape: BoxShape.circle, // 원형
+        child: SizedBox(
+
+          child: TableCalendar(
+            firstDay: DateTime.utc(2025, 3, 9),
+            lastDay: DateTime.utc(2025, 3, 22),
+            focusedDay: selectedDay,
+            selectedDayPredicate: (day) => isSameDay(selectedDay, day),
+            calendarStyle: CalendarStyle(
+              selectedDecoration: BoxDecoration(
+                color: Colors.orange, // 선택된 날짜 배경색
+                shape: BoxShape.circle, // 원형
+              ),
+              todayDecoration: BoxDecoration(
+                color: Colors.blue, // 오늘 날짜 배경색
+                shape: BoxShape.circle,
+              ),
+              defaultTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              weekendTextStyle: TextStyle(color: Colors.white),
             ),
-            todayDecoration: BoxDecoration(
-              color: Colors.blue, // 오늘 날짜 배경색
-              shape: BoxShape.circle,
+            headerStyle: HeaderStyle(
+              titleTextStyle: TextStyle(color: Colors.white, fontSize: 18.0),
+              titleCentered: true, // 제목 가운데 정렬
+              formatButtonVisible: false, // 월/주/일 버튼 숨기기
             ),
-            defaultTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            weekendTextStyle: TextStyle(color: Colors.red),
-          ),
-          headerStyle: HeaderStyle(
-            titleTextStyle: TextStyle(color: Colors.white, fontSize: 18.0),
-            titleCentered: true, // 제목 가운데 정렬
-            formatButtonVisible: false, // 월/주/일 버튼 숨기기
           ),
         ),
       ),

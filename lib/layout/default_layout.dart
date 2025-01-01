@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileinvitiation/common/constans.dart';
 
 class DefaultLayout extends StatelessWidget {
   final Color? backgroundColor;
@@ -14,13 +15,11 @@ class DefaultLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor ?? Colors.white,
-      appBar: AppBar(
-        title: Text(title),
-        centerTitle: true,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundColor ?? Colors.white,
+        body: this.body,
       ),
-      body: this.body,
     );
   }
 }
