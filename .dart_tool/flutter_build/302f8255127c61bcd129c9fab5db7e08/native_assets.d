@@ -1,0 +1,1 @@
+ C:\\Users\\john\\Desktop\\git\\mobileInvitiation\\.dart_tool\\flutter_build\\302f8255127c61bcd129c9fab5db7e08\\native_assets.yaml: 
