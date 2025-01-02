@@ -18,7 +18,18 @@ class DefaultLayout extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: backgroundColor ?? Colors.white,
-        body: this.body,
+        appBar: AppBar(
+          title:Text(title),
+          centerTitle: true,
+          backgroundColor: DEFAULT_BG_COLOR,
+          titleTextStyle: TextStyle(
+            fontFamily: FONT_FAMILY,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: DEFAULT_TEXT_COLOR,
+          ),
+        ),
+        body: body,
       ),
     );
   }

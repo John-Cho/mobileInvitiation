@@ -7,59 +7,79 @@ final providerUserData = StateNotifierProvider<UserDataNotifier, UserDataBase>(
 );
 
 class UserDataNotifier extends StateNotifier<UserDataBase> {
-  UserDataNotifier() : super(UserDataBase()){
-    final PersonData groom = PersonData(name: '조재우',
+  UserDataNotifier() : super(UserDataBase()) {
+    final PersonData groom = PersonData(
+      name: '조재우',
+      type: '신랑',
       contactNumber: '010-5788-9302',
-      giftAccountDetails: '1111-1111-1111 카카오뱅크',);
+      giftAccountDetails: '1111-1111-1111',
+      backType: '카카오뱅크',
+    );
 
-    final PersonData groomMom = PersonData(name: '윤경순',
+    final PersonData groomMom = PersonData(
+      name: '윤경순',
+      type: '어머님',
+      contactNumber: '010-6672-3039',
+      giftAccountDetails: '1111-1111-1111',
+      backType: '카카오뱅크',
+    );
+
+    final PersonData groomDad = PersonData(
+      name: '조현덕',
+      type: '아버님',
+      contactNumber: '010-5448-3039',
+      giftAccountDetails: '1111-1111-1111',
+      backType: '카카오뱅크',
+    );
+
+    final PersonData bride = PersonData(
+      name: '김예경',
+      type: '신부',
+      contactNumber: '010-5430-2645',
+      giftAccountDetails: '1111-1111-1111',
+      backType: '카카오뱅크',
+    );
+
+    final PersonData brideMom = PersonData(
+      name: '차경숙',
+      type: '어머님',
       contactNumber: '010-5788-9302',
-      giftAccountDetails: '1111-1111-1111 카카오뱅크',);
+      giftAccountDetails: '1111-1111-1111',
+      backType: '카카오뱅크',
+    );
 
-    final PersonData groomDad = PersonData(name: '조현덕',
+    final PersonData brideDad = PersonData(
+      name: '김명열',
+      type: '아버님',
       contactNumber: '010-5788-9302',
-      giftAccountDetails: '1111-1111-1111 카카오뱅크',);
-
-    final PersonData bride = PersonData(name: '김예경',
-      contactNumber: '010-5788-9302',
-      giftAccountDetails: '1111-1111-1111 카카오뱅크',);
-
-    final PersonData brideMom = PersonData(name: '차경숙',
-      contactNumber: '010-5788-9302',
-      giftAccountDetails: '1111-1111-1111 카카오뱅크',);
-
-    final PersonData brideDad = PersonData(name: '김명열',
-      contactNumber: '010-5788-9302',
-      giftAccountDetails: '1111-1111-1111 카카오뱅크',);
-
+      giftAccountDetails: '1111-1111-1111',
+      backType: '카카오뱅크',
+    );
 
     final UserData users = UserData(
       groom: groom,
       groomMom: groomMom,
       groomDad: groomDad,
       bride: bride,
-      brideMob: brideMom,
+      brideMom: brideMom,
       brideDad: brideDad,
       weddingDate: '2025년 3월 15일',
       weddingTime: '오후2시',
       venueName: '노블발렌티 대치점',
       venueAddress: '서울특별시 강남구 영동대로 325 L층',
       invitationMessage: '''
-    서로를 모르고 살아온 날보다
-    앞으로 함께 살아갈 날이
-    훨씬 많다는 사실이 행복합니다
-    서로를 영원히 귀히 여기겠습니다
-    그 시작의 자리에 함께 하시어
-    축복해 주시면 감사하겠습니다
-    ''',
+      서로를 모르고 살아온 날보다
+      앞으로 함께 살아갈 날이
+      훨씬 많다는 사실이 행복합니다
+      서로를 영원히 귀히 여기겠습니다
+      그 시작의 자리에 함께 하시어
+      축복해 주시면 감사하겠습니다''',
       quote: '''
-    서로의 차이를 이해하고
-    받아들이는 것이
-    결혼의 기쁨이자
-    아름다움이다.
-    
-    영화<어바웃 타임> 대사 중에서
-    ''',
+      서로의 차이를 이해하고
+      받아들이는 것이
+      결혼의 기쁨이자
+      아름다움이다.
+      영화<어바웃 타임> 대사 중에서''',
       themeColor: DEFAULT_BG_COLOR,
     );
 
@@ -77,7 +97,7 @@ class UserData extends UserDataBase {
 
   // 신부정보
   final PersonData bride;
-  final PersonData brideMob;
+  final PersonData brideMom;
   final PersonData brideDad;
 
   // 결혼식 정보
@@ -103,7 +123,7 @@ class UserData extends UserDataBase {
     required this.groomMom,
     required this.groomDad,
     required this.bride,
-    required this.brideMob,
+    required this.brideMom,
     required this.brideDad,
     required this.weddingDate,
     required this.weddingTime,
@@ -120,12 +140,16 @@ class UserData extends UserDataBase {
 
 class PersonData {
   final String name;
+  final String type;
   final String contactNumber; // 연락처
   final String giftAccountDetails;
+  final String backType;
 
   PersonData({
     required this.name,
+    required this.type,
     required this.contactNumber,
     required this.giftAccountDetails,
+    required this.backType,
   }); // 축의금 계좌 정보 (선택 사항)
 }

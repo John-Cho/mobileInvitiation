@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const String FONT_FAMILY = 'Nanum_Myeongjo';
+
 const Color DEFAULT_TEXT_COLOR = Colors.white;
 const Color DEFAULT_BG_COLOR = Color.fromARGB(0xff, 0x9f, 0x9b, 0x8d);
 
