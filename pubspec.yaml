@@ -73,21 +73,6 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   fonts:
-    - family: NotoSans
-      fonts:
-        - asset: asset/font/NotoSansKR/NotoSansKR-Black.otf
-          weight: 900
-        - asset: asset/font/NotoSansKR/NotoSansKR-Bold.otf
-          weight: 700
-        - asset: asset/font/NotoSansKR/NotoSansKR-Medium.otf
-          weight: 500
-        - asset: asset/font/NotoSansKR/NotoSansKR-Regular.otf
-          weight: 400
-        - asset: asset/font/NotoSansKR/NotoSansKR-Light.otf
-          weight: 300
-        - asset: asset/font/NotoSansKR/NotoSansKR-Thin.otf
-          weight: 100
-
     - family: Nanum_Myeongjo
       fonts:
         - asset: asset/font/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf
