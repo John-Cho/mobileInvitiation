@@ -21,7 +21,7 @@ class DefaultLayout extends StatelessWidget {
         appBar: AppBar(
           title:Text(title),
           centerTitle: true,
-          backgroundColor: DEFAULT_BG_COLOR,
+          backgroundColor: backgroundColor,
           titleTextStyle: TextStyle(
             fontFamily: FONT_FAMILY,
             fontSize: 16,

@@ -66,14 +66,13 @@ class UserDataNotifier extends StateNotifier<UserDataBase> {
       weddingDate: '2025년 3월 15일',
       weddingTime: '오후2시',
       venueName: '노블발렌티 대치점',
-      venueAddress: '서울특별시 강남구 영동대로 325 L층',
-      invitationMessage: '''
-      서로를 모르고 살아온 날보다
-      앞으로 함께 살아갈 날이
-      훨씬 많다는 사실이 행복합니다
-      서로를 영원히 귀히 여기겠습니다
-      그 시작의 자리에 함께 하시어
-      축복해 주시면 감사하겠습니다''',
+      venueAddress: '서울특별시 강남구 영동대로 325 S TOWER B1층',
+      invitationMessage: '''서로를 모르고 살아온 날보다
+앞으로 함께 살아갈 날이
+훨씬 많다는 사실이 행복합니다
+서로를 영원히 귀히 여기겠습니다
+그 시작의 자리에 함께 하시어
+축복해 주시면 감사하겠습니다''',
       quote: '''
       서로의 차이를 이해하고
       받아들이는 것이
